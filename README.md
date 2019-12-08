@@ -110,6 +110,10 @@
     "authentication_token": "nKsGzXPK2xawGzS7Vfc8"
 }`
 
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED
+
 * **Sample Data:**
 
   `email=rubalps@gmail.com`<br />
@@ -135,10 +139,104 @@
 * **Success Response:**
 
   * **Code:** 200 <br />
+  
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED
+
+* **Sample Data:**
+
+  `X-User-Email=rubalps@gmail.com`<br />
+  `X-User-Token=7G_KvhxsoyZnHGNJNxsd`
+
+
+
+**Add To Cart**
+----
+
+* **URL**
+
+  /v1/cart/add/:product_id
+
+* **Method:**
+
+  `GET`
+  
+* **Params**
+ 
+  **Required:**
+ 
+   `product_id=[integer]`
+
+* **Headers**
+
+  `X-User-Email=[string]`<br />
+  `X-User-Token=[string]`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
     **Content:** `{
-    "email": "rubalps@gmail.com",
-    "authentication_token": "nKsGzXPK2xawGzS7Vfc8"
+    "product": {
+        "id": 1,
+        "name": "150D",
+        "price": 123.34
+    },
+    "quantity": 4
 }`
+
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED
+
+* **Sample Data:**
+
+  `X-User-Email=rubalps@gmail.com`<br />
+  `X-User-Token=7G_KvhxsoyZnHGNJNxsd`
+
+
+**List Cart**
+----
+
+* **URL**
+
+  /v1/cart
+
+* **Method:**
+
+  `GET`
+  
+
+* **Headers**
+
+  `X-User-Email=[string]`<br />
+  `X-User-Token=[string]`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `[
+    {
+        "product": {
+            "id": 2,
+            "name": "100Z",
+            "price": 130.2
+        },
+        "quantity": 1
+    },
+    {
+        "product": {
+            "id": 1,
+            "name": "150D",
+            "price": 123.34
+        },
+        "quantity": 3
+    }
+]`
+
+* **Error Response:**
+
+  * **Code:** 401 UNAUTHORIZED
 
 * **Sample Data:**
 
