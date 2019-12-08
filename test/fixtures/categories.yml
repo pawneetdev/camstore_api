@@ -3,9 +3,9 @@
 one:
   name: MyString
   category_type: MyString
-  model: 1
+  model: 2019
 
 two:
   name: MyString
   category_type: MyString
-  model: 1
+  model: 2019
