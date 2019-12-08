@@ -1,24 +1,102 @@
-# README
+**List Products**
+----
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* **URL**
 
-Things you may want to cover:
+  /v1/products
 
-* Ruby version
+* **Method:**
 
-* System dependencies
+  `GET`
+  
+*  **URL Params**
+   
+   None
 
-* Configuration
+* **Data Params**
 
-* Database creation
+  None
 
-* Database initialization
+* **Success Response:**
 
-* How to run the test suite
+  * **Code:** 200 <br />
+    **Content:** `[
+    {
+        "id": 1,
+        "category": {
+            "name": "Nikon",
+            "category_type": "point and shoot",
+            "model": 2019
+        },
+        "description": "10x Zoom",
+        "price": 123.34,
+        "make": 2019
+    }
+]`
+    
+    
+**List Categories**
+----
 
-* Services (job queues, cache servers, search engines, etc.)
+* **URL**
 
-* Deployment instructions
+  /v1/categories
 
-* ...
+* **Method:**
+
+  `GET`
+  
+*  **URL Params**
+   
+   None
+
+* **Data Params**
+
+  None
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `[
+    {
+        "id": 1,
+        "name": "Nikon",
+        "category_type": "point and shoot",
+        "model": 2019
+    }
+]`
+
+
+
+**List Products for a Specific Category**
+----
+
+* **URL**
+
+  /v1/products/:category
+
+* **Method:**
+
+  `GET`
+  
+*  **URL Params**
+   
+   None
+
+* **Data Params**
+ 
+  **Required:**
+ 
+   `category=[string]`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `[
+    {
+        "id": 1,
+        "description": "10x zoom",
+        "price": 120.23,
+        "make": 2019
+    }
+]`
