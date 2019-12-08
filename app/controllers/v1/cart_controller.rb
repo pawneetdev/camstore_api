@@ -1,6 +1,6 @@
 class V1::CartController < ApplicationController
 
-	def create
+	def add
 		if current_user.present?
 			product = Product.find(params[:product_id])
 			
