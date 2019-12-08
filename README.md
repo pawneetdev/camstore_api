@@ -250,7 +250,7 @@
 
 * **Unit Testing for Category:**
   
-  rake
+  `rake`
   
-  `Must pass all tests`
+  Must pass all tests
    
