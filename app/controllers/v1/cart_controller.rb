@@ -1,6 +1,6 @@
 class V1::CartController < ApplicationController
 
-	def add
+	def create
 		if current_user.present?
 			product = Product.find(params[:product_id])
 			
@@ -30,6 +30,8 @@ class V1::CartController < ApplicationController
 			cart = (current_user.shopping_cart.present? ? current_user.shopping_cart : current_user.create_cart)
 
 			render json: cart.shopping_cart_products
+		else
+			head(:unauthorized)
 		end
 	end
 
