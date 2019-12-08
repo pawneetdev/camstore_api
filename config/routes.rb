@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 		resources :categories, only: [:index]
 		resources :products, only: [:index]
 		get 'products/:category' => 'products#category'
-		resources :sessions, only: [:create, :destroy]
+		resource :sessions, only: [:create, :destroy]
 	end
 
 end
