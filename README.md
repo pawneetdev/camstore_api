@@ -242,3 +242,15 @@
 
   `X-User-Email=rubalps@gmail.com`<br />
   `X-User-Token=7G_KvhxsoyZnHGNJNxsd`
+
+
+
+**Testing**
+----
+
+* **Unit Testing for Category:**
+  
+  rake
+  
+  `Must pass all tests`
+   
