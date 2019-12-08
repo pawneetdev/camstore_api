@@ -18,7 +18,7 @@ class V1::CartController < ApplicationController
 
 			current_item.save
 
-			render json: current_item.as_json, status: :created
+			render json: current_item, status: :created
 		else
 			head(:unauthorized)
 		end
@@ -29,7 +29,7 @@ class V1::CartController < ApplicationController
 		if current_user.present?
 			cart = (current_user.shopping_cart.present? ? current_user.shopping_cart : current_user.create_cart)
 
-			render json: current_user.shopping_cart.shopping_cart_products.as_json
+			render json: cart.shopping_cart_products
 		end
 	end
 
