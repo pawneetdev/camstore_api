@@ -8,14 +8,6 @@
 * **Method:**
 
   `GET`
-  
-*  **URL Params**
-   
-   None
-
-* **Data Params**
-
-  None
 
 * **Success Response:**
 
@@ -46,14 +38,6 @@
 
   `GET`
   
-*  **URL Params**
-   
-   None
-
-* **Data Params**
-
-  None
-
 * **Success Response:**
 
   * **Code:** 200 <br />
@@ -78,12 +62,8 @@
 * **Method:**
 
   `GET`
-  
-*  **URL Params**
-   
-   None
 
-* **Data Params**
+* **Params**
  
   **Required:**
  
@@ -100,3 +80,67 @@
         "make": 2019
     }
 ]`
+
+
+
+**User Login**
+----
+
+* **URL**
+
+  /v1/sessions
+
+* **Method:**
+
+  `POST`
+
+
+* **Params**
+ 
+  **Required:**
+ 
+   `email=[string]`<br />
+   `password=[string]`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `{
+    "email": "rubalps@gmail.com",
+    "authentication_token": "nKsGzXPK2xawGzS7Vfc8"
+}`
+
+* **Sample Data:**
+
+  `email=rubalps@gmail.com`<br />
+  `password=12345678`
+  
+  
+**User Sign Out**
+----
+
+* **URL**
+
+  /v1/sessions
+
+* **Method:**
+
+  `DELETE`
+
+* **Headers**
+
+  `X-User-Email=[string]`<br />
+  `X-User-Token=[string]`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** `{
+    "email": "rubalps@gmail.com",
+    "authentication_token": "nKsGzXPK2xawGzS7Vfc8"
+}`
+
+* **Sample Data:**
+
+  `X-User-Email=rubalps@gmail.com`<br />
+  `X-User-Token=7G_KvhxsoyZnHGNJNxsd`
